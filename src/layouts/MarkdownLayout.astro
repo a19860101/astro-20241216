@@ -5,6 +5,7 @@ const {frontmatter} = Astro.props
 <MasterLayout>
     <main>
         <h2>{frontmatter.title}</h2>
+        <div>發布日期 {frontmatter.pubDate.slice(0,10)}</div>
         <div>發布日期 {frontmatter.pubDate}</div>
         <div>作者 {frontmatter.author}</div>
         <slot></slot>
