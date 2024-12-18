@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
-title: 巴黎奧運摘金後痛批南韓羽協 安洗瑩：我從沒有後悔過
+title: 123test
 author: 民視新聞網
 pubDate: 2024-12-19
 hero:
