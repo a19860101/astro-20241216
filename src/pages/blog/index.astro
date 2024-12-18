@@ -7,7 +7,7 @@ const allPosts = await Astro.glob('./posts/*.md')
     <main>
         <h1>blog</h1>
         {
-            allPosts.map(post => <PostCard></PostCard>)
+            allPosts.map(post => <PostCard url={post.url} data={post.frontmatter}></PostCard>)
         }
     </main>
 </MasterLayout>

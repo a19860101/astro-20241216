@@ -1,11 +1,14 @@
+---
+const {url, data} = Astro.props
+---
 <div>
-    <div>
-        <img src="https://picsum.photos/id/40/400/300" alt="">
-    </div>
-    <div>
-        <h2>標題</h2>
+    <a href={url}>
         <div>
-            內文
+            <img src="https://picsum.photos/id/40/400/300" alt="">
         </div>
-    </div>
+        <div>
+            <h2>{data.title}</h2>
+            <div><small>{data.pubDate.slice(0,10)}</small></div>
+        </div>
+    </a>
 </div>
