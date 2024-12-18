@@ -5,9 +5,10 @@ const allPosts = await Astro.glob('./posts/*.md')
 ---
 <MasterLayout>
     <main>
-        <h1>blog</h1>
+        <div class="container flex mx-auto flex-wrap">
         {
             allPosts.map(post => <PostCard url={post.url} data={post.frontmatter}></PostCard>)
         }
+        </div>
     </main>
 </MasterLayout>
