@@ -4,10 +4,10 @@ const {url, data} = Astro.props
 <div>
     <a href={url}>
         <div>
-            <img src="https://picsum.photos/id/40/400/300" alt="">
+            <img src= {data.hero.url} alt={data.hero.alt}>
         </div>
         <div>
-            <h2>{data.title}</h2>
+            <h2 class="text-xl font-bold">{data.title}</h2>
             <div><small>{data.pubDate.slice(0,10)}</small></div>
         </div>
     </a>

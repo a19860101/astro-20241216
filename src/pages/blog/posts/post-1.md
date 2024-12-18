@@ -3,6 +3,9 @@ layout: ../../../layouts/MarkdownLayout.astro
 title: MLB》索托7.65億美元太貴？其實是大谷翔平合約「很超值」
 author: 盧品青
 pubDate: 2024-12-16
+hero:
+    url: /hero/001.jpg
+    alt: 001
 ---
 # title
 ## title
