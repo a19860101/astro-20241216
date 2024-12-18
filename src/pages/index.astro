@@ -3,13 +3,15 @@ import MasterLayout from "../layouts/MasterLayout.astro";
 import PostCard from "../components/PostCard.astro";
 const allPosts = await Astro.glob('./blog/posts/*.md')
 // const newPosts = allPosts.slice(0,2)
+allPosts.sort((b,a) => a.frontmatter.pubDate.localeCompare(b.frontmatter.pubDate)||b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate))
+
 const featurePosts = allPosts.filter(p => p.frontmatter.feature === true)
 ---
 <MasterLayout title="首頁">
-	<header>
-		<img src="https://picsum.photos/id/99/800/600" alt="">
+	<header class="aspect-video w-[800px] mx-auto px-4 my-6">
+		<img src="https://picsum.photos/id/99/800/600" alt="" class="w-full h-full object-cover rounded-xl">
 	</header>
-	<div class="container mx-auto flex">
+	<div class="w-[800px] mx-auto flex">
 		{
             featurePosts.map(post => <PostCard url={post.url} data={post.frontmatter}></PostCard>)
         }
