@@ -1,12 +1,13 @@
 ---
 import MasterLayout from "../../layouts/MasterLayout.astro";
+import PostCard from "../../components/PostCard.astro";
 const allPosts = await Astro.glob('./posts/*.md')
 ---
 <MasterLayout>
     <main>
         <h1>blog</h1>
         {
-            allPosts.map(post =><div><a href={post.url}>{post.frontmatter.title}</a></div>)
+            allPosts.map(post => <PostCard></PostCard>)
         }
     </main>
 </MasterLayout>
