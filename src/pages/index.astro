@@ -1,8 +1,17 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
+import PostCard from "../components/PostCard.astro";
+const allPosts = await Astro.glob('./blog/posts/*.md')
+// const newPosts = allPosts.slice(0,2)
+const featurePosts = allPosts.filter(p => p.frontmatter.feature === true)
 ---
 <MasterLayout title="首頁">
-	<main>
-		<h1>HOME</h1>
-	</main>
+	<header>
+		<img src="https://picsum.photos/id/99/800/600" alt="">
+	</header>
+	<div class="container mx-auto flex">
+		{
+            featurePosts.map(post => <PostCard url={post.url} data={post.frontmatter}></PostCard>)
+        }
+	</div>
 </MasterLayout>

@@ -6,6 +6,7 @@ pubDate: 2024-12-16
 hero:
     url: /hero/001.jpg
     alt: 001
+feature: true
 ---
 # title
 ## title
